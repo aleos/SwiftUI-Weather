@@ -9,6 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
+    private let forecast: [Day] = [
+        Day(dayOfWeek: .tuesday, weather: .cloudSun, temperature: 74),
+        Day(dayOfWeek: .wednesday, weather: .sunMax, temperature: 88),
+        Day(dayOfWeek: .thursday, weather: .windSnow, temperature: 55),
+        Day(dayOfWeek: .friday, weather: .sunset, temperature: 60),
+        Day(dayOfWeek: .saturday, weather: .snow, temperature: 25),
+    ]
+    
     @State private var isNight = false
     
     var body: some View {
@@ -20,11 +28,9 @@ struct ContentView: View {
                 MainWeatherStatusView(imageName: isNight ? "moon.stars.fill" : "cloud.sun.fill", temperature: 76)
                 
                 HStack(spacing: 20) {
-                    WeatherDayView(dayOfWeek: "TUE", imageName: "cloud.sun.fill", temperature: 74)
-                    WeatherDayView(dayOfWeek: "WED", imageName: "sun.max.fill", temperature: 88)
-                    WeatherDayView(dayOfWeek: "THU", imageName: "wind.snow", temperature: 55)
-                    WeatherDayView(dayOfWeek: "FRI", imageName: "sunset.fill", temperature: 60)
-                    WeatherDayView(dayOfWeek: "SAT", imageName: "snow", temperature: 25)
+                    ForEach(0 ..< forecast.count) { dayNumber in
+                        WeatherDayView(weather: forecast[dayNumber])
+                    }
                 }
                 
                 Spacer()
@@ -49,21 +55,19 @@ struct ContentView_Previews: PreviewProvider {
 
 struct WeatherDayView: View {
     
-    var dayOfWeek: String
-    var imageName: String
-    var temperature: Int
+    var weather: Day
     
     var body: some View {
         VStack {
-            Text(dayOfWeek)
+            Text(weather.dayNameShort)
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(.white)
-            Image(systemName: imageName)
+            Image(systemName: weather.imageName)
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50, height: 40)
-            Text("\(temperature)°")
+            Text("\(weather.temperature)°")
                 .font(.system(size: 28, weight: .medium))
                 .foregroundColor(.white)
         }

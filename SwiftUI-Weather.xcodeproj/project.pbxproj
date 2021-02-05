@@ -14,6 +14,7 @@
 		57DC0E1125CCE28A00B1EF6B /* SwiftUI_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC0E1025CCE28A00B1EF6B /* SwiftUI_WeatherTests.swift */; };
 		57DC0E1C25CCE28A00B1EF6B /* SwiftUI_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC0E1B25CCE28A00B1EF6B /* SwiftUI_WeatherUITests.swift */; };
 		57DC0E2D25CD0A1E00B1EF6B /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC0E2C25CD0A1E00B1EF6B /* WeatherButton.swift */; };
+		57DC0E3225CD0FD900B1EF6B /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC0E3125CD0FD900B1EF6B /* Day.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		57DC0E1B25CCE28A00B1EF6B /* SwiftUI_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WeatherUITests.swift; sourceTree = "<group>"; };
 		57DC0E1D25CCE28A00B1EF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57DC0E2C25CD0A1E00B1EF6B /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
+		57DC0E3125CD0FD900B1EF6B /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				57DC0DFE25CCE28900B1EF6B /* SwiftUI_WeatherApp.swift */,
 				57DC0E0025CCE28900B1EF6B /* ContentView.swift */,
 				57DC0E2C25CD0A1E00B1EF6B /* WeatherButton.swift */,
+				57DC0E3125CD0FD900B1EF6B /* Day.swift */,
 				57DC0E0225CCE28A00B1EF6B /* Assets.xcassets */,
 				57DC0E0725CCE28A00B1EF6B /* Info.plist */,
 				57DC0E0425CCE28A00B1EF6B /* Preview Content */,
@@ -264,6 +267,7 @@
 			files = (
 				57DC0E0125CCE28900B1EF6B /* ContentView.swift in Sources */,
 				57DC0DFF25CCE28900B1EF6B /* SwiftUI_WeatherApp.swift in Sources */,
+				57DC0E3225CD0FD900B1EF6B /* Day.swift in Sources */,
 				57DC0E2D25CD0A1E00B1EF6B /* WeatherButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
